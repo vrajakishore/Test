@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerCallbacks {
-
+    private CharSequence mTitle;
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
@@ -32,13 +32,46 @@ public class MainActivity extends ActionBarActivity
         // Set up the drawer.
         mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar);
         // populate the navigation drawer
-        mNavigationDrawerFragment.setUserData("John Doe", "johndoe@doe.com", BitmapFactory.decodeResource(getResources(), R.drawable.avatar));
+        mNavigationDrawerFragment.setUserData("M.V Kishore", "vrajakishore2@gmail.com", BitmapFactory.decodeResource(getResources(), R.drawable.avatar));
     }
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         Toast.makeText(this, "Menu item selected -> " + position, Toast.LENGTH_SHORT).show();
+        android.app.Fragment objFragment = null;
+
+        switch (position) {
+            case 0:
+                objFragment = new Contact_Fragment();
+                mTitle = "Send";
+                break;
+            case 1:
+                objFragment = new Contact_Fragment();
+                mTitle = "Carry";
+                break;
+            case 2:
+                objFragment = new Contact_Fragment();
+                mTitle = "History";
+                break;
+            case 3:
+                objFragment = new Contact_Fragment();
+                mTitle = "Share";
+                break;
+            case 4:
+                objFragment = new Contact_Fragment();
+                mTitle = "My Notifications";
+                break;
+            case 5:
+                objFragment = new Contact_Fragment();
+                mTitle = "Contact";
+                break;
+        }
+        // update the main content by replacing fragments
+        android.app.FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, objFragment)
+                .commit();
     }
 
 
