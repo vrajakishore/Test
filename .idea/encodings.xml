@@ -2,10 +2,31 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/Contact_Fragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/Declaration/ConnectionDetector.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/Declaration/Constant.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/Declaration/Constant_History.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/Declaration/Constants_Notification.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/Declaration/DatePicker.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/Declaration/ListViewAdapter.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/Declaration/ListViewAdapterHistory.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/Declaration/ListViewAdapterNotification.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/Declaration/TimePicker.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/Declaration/UserSessionManager.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/FragmentSimpleLoginButton.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/MainActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/MyApplication.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/courier/kishore/com/test/Registration.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/fab_label_background.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/contact_layout.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_simple_login_button.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/registration.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_splash_screen.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_traveller_activity.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_traveller_details.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_traveller_tabbed.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/menu/navigation_main.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/values/fb_app_id.xml" charset="windows-1252" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

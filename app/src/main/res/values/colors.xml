@@ -5,7 +5,7 @@
         https://developer.android.com/training/material/images/ThemeColors.png
 
         Refer also to Color palette for the UI colors you should use:
-        http://www.google.com/design/spec/style/color.html#color-ui-color-palette
+        http://www.google.com/design/spec/style/color.html#color-ui-color-palette#2196F3
     -->
 
     <color name="myPrimaryColor">#2196F3</color>

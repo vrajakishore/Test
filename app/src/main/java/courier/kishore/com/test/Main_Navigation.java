@@ -37,7 +37,7 @@ public class Main_Navigation extends ActionBarActivity
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-        // update the main content by replacing fragments
+        // update the navigation_main content by replacing fragments
         Toast.makeText(this, "Menu item selected -> " + position, Toast.LENGTH_SHORT).show();
         android.app.Fragment objFragment = null;
 
@@ -67,7 +67,7 @@ public class Main_Navigation extends ActionBarActivity
                 mTitle = "Contact";
                 break;
         }
-        // update the main content by replacing fragments
+        // update the navigation_main content by replacing fragments
         android.app.FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.container, objFragment)
@@ -90,7 +90,7 @@ public class Main_Navigation extends ActionBarActivity
             // Only show items in the action bar relevant to this screen
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
-            getMenuInflater().inflate(R.menu.main, menu);
+            getMenuInflater().inflate(R.menu.navigation_main, menu);
             return true;
         }
         return super.onCreateOptionsMenu(menu);
