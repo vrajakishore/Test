@@ -3,4 +3,11 @@
     <string name="drawer_open">Menu opened</string>
     <string name="drawer_close">Menu closed</string>
     <string name="action_settings">Settings</string>
+
+    <string name="send">Send Courier</string>
+    <string name="carry">Carry Courier</string>
+    <string name="history">History</string>
+    <string name="share">Share</string>
+    <string name="notifications">My Notification</string>
+    <string name="contactUs">Contact Us</string>
 </resources>
