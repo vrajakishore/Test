@@ -1,5 +1,8 @@
 package courier.kishore.com.test;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -12,12 +15,18 @@ import android.widget.Toast;
 
 import java.util.HashMap;
 
+import courier.kishore.com.test.Declaration.ConnectionDetector;
 import courier.kishore.com.test.Declaration.UserSessionManager;
 
 
 public class Main_Navigation extends ActionBarActivity
         implements NavigationDrawerCallbacks {
     private CharSequence mTitle;
+
+    Boolean isInternetPresent = false;
+
+    // Connection detector class
+    ConnectionDetector cd;
     UserSessionManager session;
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -32,19 +41,49 @@ public class Main_Navigation extends ActionBarActivity
         mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
         setSupportActionBar(mToolbar);
 
+        cd = new ConnectionDetector(getApplicationContext());
+        isInternetPresent = cd.isConnectingToInternet();
+
+        // check for Internet status
+        if (isInternetPresent) {
+            // Internet Connection is Present
+            // make HTTP requests
+            //     showAlertDialog(MainActivity.this, "Internet Connection",
+            //      "You have internet connection", true);
+        } else {
+            // Internet connection is not present
+            // Ask user to connect to Internet
+            showAlertDialog(Main_Navigation.this, "No Internet Connection",
+                    "You don't have internet connection.", false);
+        }
+
+        session = new UserSessionManager(this.getApplicationContext());
+
+        if(session.checkLogin())
+            this.finish();
+
+        // get user data from session
+        HashMap<String, String> user = session.getUserDetails();
+
+        // get name
+        String name = user.get(UserSessionManager.KEY_NAME);
+
+        // get email
+        String session_email = user.get(UserSessionManager.KEY_EMAIL);
+
+
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.fragment_drawer);
 
         // Set up the drawer.
         mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar);
         // populate the navigation drawer
-        mNavigationDrawerFragment.setUserData("M.V Kishore", "vrajakishore2@gmail.com", BitmapFactory.decodeResource(getResources(), R.drawable.avatar));
+        mNavigationDrawerFragment.setUserData("Welcome", session_email, BitmapFactory.decodeResource(getResources(), R.drawable.avatar));
     }
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the navigation_main content by replacing fragments
-        Toast.makeText(this, "Menu item selected -> " + position, Toast.LENGTH_SHORT).show();
         android.app.Fragment objFragment = null;
 
         switch (position) {
@@ -139,4 +178,25 @@ public class Main_Navigation extends ActionBarActivity
     }
 
 
+    public void showAlertDialog(Context context, String title, String message, Boolean status) {
+        AlertDialog alertDialog = new AlertDialog.Builder(context).create();
+
+        // Setting Dialog Title
+        alertDialog.setTitle(title);
+
+        // Setting Dialog Message
+        alertDialog.setMessage(message);
+
+        // Setting alert dialog icon
+        alertDialog.setIcon((status) ? R.mipmap.success : R.mipmap.fail);
+
+        // Setting OK Button
+        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        // Showing Alert Message
+        alertDialog.show();
+    }
 }

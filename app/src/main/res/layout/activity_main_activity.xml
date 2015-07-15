@@ -5,16 +5,11 @@
     android:layout_height="match_parent"
     tools:layout="@layout/fragment_simple_login_button">
 
-    <include
-        android:id="@+id/toolbar_actionbar"
-        layout="@layout/toolbar_default"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <com.dexafree.materialList.view.MaterialListView
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:id="@+id/cardList"/>
+        android:id="@+id/cardList"
+        />
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:id="@+id/fab1"
