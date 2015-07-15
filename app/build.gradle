@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "courier.kishore.com.test"
-        minSdkVersion 20
-        targetSdkVersion 22
+        minSdkVersion 15
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
     }

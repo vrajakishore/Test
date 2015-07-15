@@ -1,10 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout="@layout/fragment_simple_login_button"
-    style="@style/AppTheme">
+    tools:layout="@layout/fragment_simple_login_button">
 
     <include
         android:id="@+id/toolbar_actionbar"
@@ -15,8 +14,7 @@
     <com.dexafree.materialList.view.MaterialListView
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:id="@+id/cardList"
-        />
+        android:id="@+id/cardList"/>
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:id="@+id/fab1"
@@ -54,4 +52,5 @@
 
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
-</RelativeLayout>
+
+</FrameLayout>

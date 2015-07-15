@@ -13,7 +13,7 @@
 
     <string name="app_name">Free Courier</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Logout</string>
     <string name="action_simple_login">Login</string>
 
     <string name="action_signup">Register</string>

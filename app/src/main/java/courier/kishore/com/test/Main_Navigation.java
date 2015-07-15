@@ -1,5 +1,6 @@
 package courier.kishore.com.test;
 
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -9,10 +10,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import java.util.HashMap;
+
+import courier.kishore.com.test.Declaration.UserSessionManager;
+
 
 public class Main_Navigation extends ActionBarActivity
         implements NavigationDrawerCallbacks {
     private CharSequence mTitle;
+    UserSessionManager session;
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
@@ -43,23 +49,23 @@ public class Main_Navigation extends ActionBarActivity
 
         switch (position) {
             case 0:
-                objFragment = new Contact_Fragment();
+                objFragment = new Send_Fragment();
                 mTitle = "Send";
                 break;
             case 1:
-                objFragment = new Contact_Fragment();
+                objFragment = new Carry_Fragment();
                 mTitle = "Carry";
                 break;
             case 2:
-                objFragment = new Contact_Fragment();
+                objFragment = new History_Fragment();
                 mTitle = "History";
                 break;
             case 3:
-                objFragment = new Contact_Fragment();
+                objFragment = new Share_Fragment();
                 mTitle = "Share";
                 break;
             case 4:
-                objFragment = new Contact_Fragment();
+                objFragment = new MyNotifications();
                 mTitle = "My Notifications";
                 break;
             case 5:
@@ -93,6 +99,7 @@ public class Main_Navigation extends ActionBarActivity
             getMenuInflater().inflate(R.menu.navigation_main, menu);
             return true;
         }
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -104,8 +111,27 @@ public class Main_Navigation extends ActionBarActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        session = new UserSessionManager(getApplicationContext());
+        if (session.checkLogin())
+            finish();
+
+        // get user data from session
+        HashMap<String, String> user = session.getUserDetails();
+
+        // get name
+        String name = user.get(UserSessionManager.KEY_NAME);
+
+        // get email
+        String email = user.get(UserSessionManager.KEY_EMAIL);
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            if (email != null) {
+                session.logoutUser();
+            }
+
+            Intent intent = new Intent(Main_Navigation.this, MainActivity.class);
+            startActivity(intent);
             return true;
         }
 

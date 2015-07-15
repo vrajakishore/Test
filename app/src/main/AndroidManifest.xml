@@ -9,29 +9,51 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:icon="@mipmap/launcher_logo"
+        android:label="@string/app_name">
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/app_id" />
 
         <activity
-            android:name=".Main_Navigation"
-            android:label="@string/app_name" >
-
-        </activity>
-        <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main_activity" >
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".Main_Navigation"
+            android:label="@string/title_activity_navigation_main"
+            android:theme="@style/AppTheme1"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Traveller_activity"
+            android:theme="@style/AppTheme"
+            android:label="@string/title_activity_traveller_activity" >
+        </activity>
+        <activity
+            android:name=".TravellerDetails"
+            android:theme="@style/AppTheme"
+            android:label="@string/title_activity_traveller_details" >
+        </activity>
+
     </application>
+
 
 </manifest>

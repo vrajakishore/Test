@@ -48,7 +48,7 @@
                 android:orientation="vertical"
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
-                android:theme="@style/AppTheme"
+                android:theme="@style/AppTheme1"
                 android:weightSum="1">
 
                 <EditText

@@ -48,17 +48,13 @@ import dmax.dialog.SpotsDialog;
 
 public class MainActivity extends ActionBarActivity {
 
-
     // flag for Internet connection status
     Boolean isInternetPresent = false;
 
     // Connection detector class
     ConnectionDetector cd;
-
     FloatingActionsMenu menu;
     MaterialListView cardList;
-
-
     UserSessionManager session;
 
     private EditText username;
@@ -67,12 +63,8 @@ public class MainActivity extends ActionBarActivity {
     private Toolbar mToolbar;
 
     private static final String TAG = "MAIN ACTIVITY";
-
-
     public static final int INDEX_SIMPLE_LOGIN = 0;
-
     public static final int INDEX_SIGNUP = 2;
-
     private static final String STATE_SELECTED_FRAGMENT_INDEX = "selected_fragment_index";
     public static final String FRAGMENT_TAG = "fragment_tag";
     private FragmentManager mFragmentManager;
@@ -82,9 +74,8 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
-
-        setSupportActionBar(mToolbar);
+       // mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
+       // setSupportActionBar(mToolbar);
 
         if ((getIntent().getFlags() & Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) != 0) {
             // Here activity is brought to front, not created,
@@ -104,10 +95,10 @@ public class MainActivity extends ActionBarActivity {
         cardList.getLayoutManager().offsetChildrenVertical(30);
         menu = (FloatingActionsMenu) findViewById(R.id.fab1);
 
-     /*   ActionBar ab = getSupportActionBar();
+        ActionBar ab = getSupportActionBar();
         Resources r = getResources();
         Drawable d = r.getDrawable(R.color.royalBlue);
-        ab.setBackgroundDrawable(d); */
+        ab.setBackgroundDrawable(d);
 
         FloatingActionButton fare = (FloatingActionButton) findViewById(R.id.login);
         fare.setOnClickListener(new View.OnClickListener() {
