@@ -68,7 +68,7 @@ public class MainActivity extends ActionBarActivity {
     private static final String STATE_SELECTED_FRAGMENT_INDEX = "selected_fragment_index";
     public static final String FRAGMENT_TAG = "fragment_tag";
     private FragmentManager mFragmentManager;
-
+    private long back_pressed = 2000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -132,6 +132,14 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+    }
+    @Override
+    public void onBackPressed() {
+
+        if (back_pressed + 2000 > System.currentTimeMillis()) super.onBackPressed();
+        else
+            Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT).show();
+        back_pressed = System.currentTimeMillis();
     }
 
     @Override

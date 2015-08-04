@@ -16,8 +16,13 @@
         android:icon="@mipmap/launcher_logo"
         android:label="@string/app_name">
         <meta-data
+
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/app_id" />
+
+        <meta-data
+            android:name="com.google.android.geo.AIzaSyCmpgcPiZseAGE0Z_UxcPJmz3U5cAjUIEc"
+            android:value="AIzaSyCmpgcPiZseAGE0Z_UxcPJmz3U5cAjUIEc"/>
 
         <activity
             android:name=".MainActivity"

@@ -42,4 +42,14 @@
         android:onClick="clickNew1"
         android:src="@mipmap/whatsapp" />
 
+
+    <com.thepinkandroid.citiesautocomplete.general.DelayAutoCompleteTextView
+        android:id="@+id/cityTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:imeOptions="flagNoExtractUi|actionSearch"
+        android:inputType="textCapSentences"
+        android:paddingRight="8dp"/>
+
 </RelativeLayout>
