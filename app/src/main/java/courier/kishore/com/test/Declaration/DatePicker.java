@@ -25,7 +25,10 @@ public class DatePicker extends DialogFragment implements DatePickerDialog.OnDat
         int dd = calendar.get(Calendar.DAY_OF_MONTH);
 
 
-        return new DatePickerDialog(getActivity(), this, yy, mm, dd);
+        DatePickerDialog da = new DatePickerDialog(getActivity(), this, yy, mm, dd);
+        Date newDate = calendar.getTime();
+        da.getDatePicker().setMinDate(newDate.getTime());
+        return da;
     }
 
     public void populateSetDate(int year, int month, int day) {
@@ -45,6 +48,7 @@ public class DatePicker extends DialogFragment implements DatePickerDialog.OnDat
     @Override
     public void onDateSet(android.widget.DatePicker view, int year, int monthOfYear, int dayOfMonth) {
         populateSetDate(year, monthOfYear + 1, dayOfMonth);
+
 
     }
 

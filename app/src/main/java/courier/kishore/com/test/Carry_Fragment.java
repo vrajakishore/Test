@@ -133,6 +133,7 @@ public class Carry_Fragment extends Fragment {
             @Override
             public void onClick(View v) {
                DatePicker newFragment = new DatePicker();
+
                 newFragment.show(getFragmentManager(), "DatePicker");
 
             }

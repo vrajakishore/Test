@@ -5,34 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal">
-<TextView
+
+
+    <TextView
+        android:id="@+id/section_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-    android:id="@+id/section_label" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:text="SHARE"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageButton
-        android:src="@mipmap/shareit"
-        android:layout_width="wrap_content"
         android:id="@+id/newbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/section_label"
+        android:layout_marginTop="137dp"
+        android:layout_toLeftOf="@+id/section_label"
+        android:layout_toStartOf="@+id/section_label"
+        android:background="@null"
         android:clickable="true"
         android:onClick="clickNew"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:layout_below="@+id/section_label"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="139dp" />
+        android:src="@mipmap/shareit" />
 
     <ImageButton
-        android:src="@mipmap/whatsapp"
-        android:layout_width="wrap_content"
         android:id="@+id/newbutton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/newbutton"
+        android:layout_toEndOf="@+id/section_label"
+        android:layout_toRightOf="@+id/section_label"
+        android:background="@null"
         android:clickable="true"
         android:onClick="clickNew1"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:layout_alignTop="@+id/newbutton"
-        android:layout_toRightOf="@+id/section_label"
-        android:layout_toEndOf="@+id/section_label" />
+        android:src="@mipmap/whatsapp" />
 
 </RelativeLayout>

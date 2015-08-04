@@ -8,11 +8,14 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+
+
     <TextView
         android:id="@+id/notification_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
+        android:text="MY NOTIFICATIONS"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ScrollView
